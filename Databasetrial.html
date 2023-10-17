@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="blah">CITIES</h1>
+    <button id="clickButton" > CLICK </button>
+    <input id="ID">
+
+   
+</body>
+
+<script type="module" >
+ 
+
+
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
+    import { getFirestore, collection, setDoc, doc, addDoc  } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-lite.js';
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBZ2srrvhRP6t0MTOCnG5M2Ne1LdvB7K18",
+        authDomain: "kairos-data-a2bd6.firebaseapp.com",
+        projectId: "kairos-data-a2bd6",
+        storageBucket: "kairos-data-a2bd6.appspot.com",
+        messagingSenderId: "199943965259",
+        appId: "1:199943965259:web:eee9ea126f8f4d6af59bce",
+        measurementId: "G-HFMWCBTMEE"
+    }
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+const clickButton = document.getElementById("clickButton")
+
+clickButton.addEventListener("click", function() {
+            const userInput = document.getElementById("ID")
+            const ID = userInput.value
+            console.log(ID)
+
+            const docRef = addDoc(collection(db, "users"), {
+                choices:'blah',
+                ID:ID,
+                
+            })
+        })
+
+
+</script>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi</title>
+</head>
+<body>
+<section>
+    <div class="topflex">
+        <div class="title">
+            <h1>Teriyaki Chicken Sushi</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut eu sem integer vitae.</p>
+        </div>
+        <div class="img">
+            <img src="SUSHIFULL.jpg">
+        </div>
+    </div>
+</section>
+   <button class="Cart" onclick="addToCart()">ADD TO CART</button>
+
+<section>
+
+</section>
+
+<section class="info">
+    <h1>Nutritional Information</h1>
+    <div>
+        <table class="nutrition">
+            <tr>
+              <th class="heading">Nutrient</th>
+              <th class="heading">Amount per Serving</th>
+            </tr>
+            <tr>
+              <td><strong>Carbs</strong></td>
+              <td>77.6g</td>
+            </tr>
+            <tr>
+              <td>Dietary Fiber</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Sugars</td>
+              <td>12.4g</td>
+            </tr>
+            <tr>
+              <td><strong>Fat</strong></td>
+              <td>2.7g</td>
+            </tr>
+            <tr>
+              <td>Saturated</td>
+              <td>0.6g</td>
+            </tr>
+            <tr>
+              <td>Polyunsaturated</td>
+              <td>0g</td>
+            </tr>
+            <tr>
+              <td>Monounsaturated</td>
+              <td>0g</td>
+            </tr>
+            <tr>
+              <td>Trans</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td><strong>Protein</strong></td>
+              <td>17.6g</td>
+            </tr>
+            <tr>
+              <td>Sodium</td>
+              <td>606mg</td>
+            </tr>
+            <tr>
+              <td>Potassium</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Cholesterol</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Vitamin A</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Vitamin C</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Calcium</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Iron</td>
+              <td>--</td>
+            </tr>
+          </table>
+    </div>
+</section>
+    
+</body>
+
+<style>
+ .topflex {
+  display: flex;
+  background-color: white;
+  
+}
+
+.img {
+  background-color: antiquewhite;
+  margin: 5px;
+  padding: 10px;
+  margin-top: 80px;
+}
+
+.img img {
+    width: 100%;
+}
+
+.title {
+    margin-top: 80px;
+    font-size: large;  
+}
+
+table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 0 auto;
+      float: left;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th.heading {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    .info {
+        background-color: antiquewhite;
+    }
+</style>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    databaseURL: "YOUR_DATABASE_URL",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID",
+    measurementId: "YOUR_MEASUREMENT_ID"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+
+  function addToCart() {
+    const cartRef = database.ref("cart");
+    const newItemRef = cartRef.push();
+    newItemRef.set({
+      productName: "Teriyaki Chicken Sushi",
+      quantity: 1
+    }).then(() => {
+      alert("Item added to cart!");
+      window.location.href = "cart-and-order-page.html";
+    }).catch((error) => {
+      console.error("Error adding item to cart:", error);
+    });
+  }
+</script>
+
+</html>

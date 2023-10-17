@@ -1,0 +1,130 @@
+.topnav {
+    overflow: hidden;
+    background-color: #A6D0DD;
+    width: 100%;
+    text-align: center;
+}
+
+.topnav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+.topnav li {
+    display: inline-block;
+}
+
+.topnav a {
+    display: inline-block;
+    padding: 50px 20px;
+    text-decoration: none;
+    text-align: center;
+    color: Black;
+    font-family: "hey-eloise", sans-serif;
+    font-size: xx-large;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#logo {
+    display: inline-block;
+    margin: 0;
+    height: 150px;
+    width: auto; 
+    border-radius: 50%; 
+}
+
+.header {
+width: 100%;
+background-position: center;
+background-size: cover;
+background-color: rgba(255,255,255,0.6);
+background-blend-mode: lighten;
+position: relative;
+}
+.background {
+width: 100%;
+background-position: center;
+background-size: cover;
+background-blend-mode: lighten;
+position: relative;
+}
+
+.text-box {
+width: 100%;
+color: black;
+position: absolute;
+text-align: center;
+left: 6%;
+}
+
+.text-box h1 {
+font-size: 200px;
+font-family: "canvas-script", sans-serif;
+margin-top: 60px;
+margin-right: 110px;
+margin-bottom: 0px;
+text-align: center;
+}
+
+
+.about {
+    float: left;
+    width: 30%;
+    height: 300px; 
+    background: #ccc;
+    padding: 20px;
+  }
+
+
+.image-container {
+    float: left;
+    width: 30%;
+}
+
+.image-container img {
+    max-width: 150%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px; 
+}
+
+.text-container {
+    width: 60%; 
+    margin-left: 230px;
+}
+
+.text-container p {
+    font-size: 22px; 
+    line-height: 1.5; 
+    color: #333; 
+    font-family: "Moonblossom", sans-serif ;
+}
+
+.text-container h1 {
+    font-size: 60px; 
+    font-family: "canvas-script", sans-serif;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: hidden; 
+}
+
+.footer {
+text-align: left;
+background-color: #A6D0DD;
+padding-top: 2%;
+padding-bottom: 2%;
+padding-left: 2%;
+font-family:  "Moonblossom", sans-serif;
+}

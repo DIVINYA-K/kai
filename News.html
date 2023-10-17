@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="News.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ayn0vpn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Make Your Own</title>
+</head>
+<body>
+    
+    <section class="header">
+        <div class="topnav">
+            <ul>
+                <li><a class="#Duplicatehomepage" href="Index.html">Home</a></li>
+                <li><a href="News.html">Make Your Own</a></li> 
+                <li><a href="#"><img id="logo" src="cuteowl.gif"></a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Order.html">Order</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <img src="" class="bird">
+        </div>
+      <div class="column">
+      <section>
+        <section>
+          <div class="News">
+            <h1>Make Your Own</h1>
+            <p>Make your own Bento Box, and customise with meals of your choice! Answer the questions below to make your own bento!</p>
+        </div>
+        </section>
+
+        <section>
+          <h1 id="quizQuestion"></h1> 
+          <div id="quizContainer">
+            <div id="question"></div>
+            <div id="choices"></div>
+          </div> 
+          <div id="userChoicesContainer"></div>
+          <div id="quantityInputContainer"></div>
+        </section>
+
+        <section id="userInputSection" style="display: none;">
+          <div>
+            <h1>If you want to save the lunchbox you have made, Enter an ID number and your Name. Then to find it, just type in the ID number you put in! </h1>
+          </div>
+          <div>
+            <h1>Enter ID</h1>
+            <input type="number" id="ID">
+          </div>
+          <div>
+            <h1>Enter Name</h1>
+            <input type="text" id="name">
+          </div>
+          <button id="clickButton">ENTER</button>
+          <div>
+        </section>
+
+        <section id="findUserInput">
+          <h1>Already Done the quiz and want to find what you picked? Just enter the ID you made below!</h1>
+          <h2>Find User by ID</h2>
+            <input type="text" id="findID">
+            <button id="findButton">Find User</button>
+          </div>
+          <div id="output"></div>
+        </section>
+        
+
+      <section class="footer">
+        <footer> 
+          <p>email: karumalil.p@maristcollege.school.nz</p>
+          <p>website developer: Divinya Karumalil</p>
+          <p>FAQ</p>
+        </footer>
+      </section>
+     
+      <script src="News.js"></script>
+
+</body>
+<script type="module" >
+ 
+
+//Importing functions from firebase 
+ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
+ import { getFirestore, query, collection, setDoc, doc, addDoc, getDocs, where } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-lite.js';
+
+//My firebase configuration to link my code with my database
+  const firebaseConfig = {
+      apiKey: "AIzaSyBZ2srrvhRP6t0MTOCnG5M2Ne1LdvB7K18",
+      authDomain: "kairos-data-a2bd6.firebaseapp.com",
+      projectId: "kairos-data-a2bd6",
+      storageBucket: "kairos-data-a2bd6.appspot.com",
+      messagingSenderId: "199943965259",
+      appId: "1:199943965259:web:eee9ea126f8f4d6af59bce",
+      measurementId: "G-HFMWCBTMEE"
+  }
+  //This is initialising the app with the firebase configuration give above
+  const app = initializeApp(firebaseConfig);
+  //This is getting my database from Firestore, db is short for database
+  const db = getFirestore(app);
+
+  //Declaring a constant getting the click button by the Id click button
+const clickButton = document.getElementById("clickButton")
+//Adding an event listener to the button. Event listener is to 'listen' to know if the button has been clicked for example.
+clickButton.addEventListener("click", function() {
+  //This is getting the value of the user ID and name by Id
+          const userID = document.getElementById("ID").value
+          const name = document.getElementById("name").value
+          //This is saying that the constant choices is the string User Choices with the combined elements from userChoices. The join method is taking all the elements in the userChoices and comnbining them as one string the comma separates them.
+          const choices = "User Choices: " + userChoices.join(", ");
+          const clickButton = document.getElementById("clickButton");
+
+  //Checking if the userID is not equal to an empty string
+  if (userID !== "") {
+  //Alerting the user that the Data has been added if it is not an empty string
+    alert("Data added!");
+  } else {
+    // Alerting the user to enter something in the ID field if it is empty
+    alert("Please enter ID before clicking.");
+  }
+  //This is declaring a variable called docRef. This is selecting the collection called users from my database (db) and adding a new document in that collection.
+          const docRef = addDoc(collection(db, "users"), {
+            //These are the names of what is being added to the database
+              ID:userID,
+              Name:name,
+              choices:choices
+              
+          })
+      })
+
+      const findButton = document.getElementById("findButton");
+//
+findButton.addEventListener("click", async function() {
+  //Declaring Consts 'users' is the collection in my firestore database
+    const collectionName = "users"; 
+    const fieldName = "ID";
+    const queryValue = document.getElementById("findID").value;
+    const outputElement = document.getElementById("output");
+    
+    //This is retrieving a collection which is called users, as declared in the constant above, from the database, it should be retrieved from the value of the Id, which fieldName is declared as.
+    const q = query(collection(db, collectionName), where(fieldName, "==", queryValue));
+
+    //A try block is used for code that might have an error in it
+    try {
+      //This is getting the documents from firestore
+    const querySnapshot = await getDocs(q);
+
+    //This is doing something for each document. querySnapshot is something that represent the result of the query
+    querySnapshot.forEach((doc) => {
+       
+        const resultDiv = document.createElement('div');
+
+       //This is getting specific properties called ID, choices, Name from the document data.
+        const { ID, choices, Name } = doc.data();
+
+        //Showing what is in the result div in the HTML. The $ and curly brackets allow you to have strings with multiple lines
+        resultDiv.innerHTML = `
+            <strong>ID:</strong> ${ID}<br>
+            <strong>Choices:</strong> ${choices}<br>
+            <strong>Name:</strong> ${Name}
+        `;
+
+     //This is adding the resultDiv that I created before to the outputElement
+        outputElement.appendChild(resultDiv);
+
+        
+    });
+
+    //The Catch block is used to handle errors  
+} catch (error) {
+  //This is alerting if there is an error
+    alert("Error fetching documents: ");
+}
+
+    
+});
+
+
+
+</script>
+
+</html>

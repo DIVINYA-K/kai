@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .hover-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s;
+      z-index: 1;
+    }
+
+    .aboutcol:hover .hover-image {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .aboutcol {
+      flex-basis: 31%;
+      background: cadetblue;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .aboutcol h3 {
+      text-align: center;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <div class="aboutcol">
+      <h3>SUSHI BENTO</h3>
+      <p>The Sushi Bento box contains 8 pieces of sushi of your choice and healthy snacks including popcorn and carrot sticks. It is a lovely and healthy meal for kids</p>
+      <img class="hover-image" src="SUSHI.jpg" alt="Hover Image">
+    </div>
+    <div class="aboutcol">
+      <h3>WRAP BENTO</h3>
+      <p>The Wrap Bento box contains 1 medium-sized wrap with fillings of your choice and healthy snacks including nuts and yogurt. It is a wonderful healthy meal for kids</p>
+      <img class="hover-image" src="WRAPS.jpg" alt="Hover Image">
+    </div>
+    <div class="aboutcol">
+      <h3>SALAD BENTO</h3>
+      <p>The Salad Bento box contains a bowl of salad with grains, veggies, and many good sources of protein. Snacks include pea crisps and healthy energy bars. This Bento is a great healthy meal choice.</p>
+      <img class="hover-image" src="SALAD.jpg" alt="Hover Image">
+    </div>
+  </div>
+</body>
+
+</html>

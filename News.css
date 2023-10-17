@@ -1,0 +1,121 @@
+.topnav {
+    overflow: hidden;
+    background-color: #A6D0DD;
+    width: 100%;
+    text-align: center;
+}
+
+.topnav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topnav li {
+    display: inline-block;
+}
+
+.topnav a {
+    display: inline-block;
+    padding: 50px 20px;
+    text-decoration: none;
+    text-align: center;
+    color: Black;
+    font-family: "hey-eloise", sans-serif;
+    font-size: xx-large;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.News h1 {
+    font-size: 200px;
+    font-family: "canvas-script", sans-serif;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    }
+
+.News p {
+        font-size: 30px;
+        font-family:  "Moonblossom", sans-serif;
+        text-align: center;
+        margin-top:5px;
+    }
+
+#logo {
+    display: inline-block;
+    margin: 0;
+    height: 150px;
+    width: auto; 
+    border-radius: 50%; 
+}
+
+#quizQuestion {
+    font-size: 48px;
+    font-family:  "Moonblossom", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+#choices button {
+    font-size: 30px;
+    font-family:  "Moonblossom", sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#quizContainer {
+    text-align: center;
+}
+
+.footer {
+text-align: left;
+background-color: #A6D0DD;
+padding-top: 2%;
+padding-bottom: 2%;
+padding-left: 2%;
+font-family:  "Moonblossom", sans-serif;
+}
+
+#userChoicesContainer h2 {
+    text-align: center;
+    font-family: "canvas-script", sans-serif;
+    font-size: 40px;
+}
+
+#userChoicesContainer p {
+    font-family: "Moonblossom", sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+#userInputSection {
+    text-align: center;
+    font-family: "Moonblossom", sans-serif;
+    margin-bottom: 20px;
+  }
+
+  #userInputSection h1 {
+    font-size: xx-large;
+  }
+
+  #findUserInput{
+    text-align: center;
+    font-family: "Moonblossom", sans-serif;
+    margin-bottom: 20px;
+  }
+
+  #output {
+    text-align: center;
+    font-family: "Moonblossom", sans-serif;
+  }
+  

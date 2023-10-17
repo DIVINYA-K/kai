@@ -1,0 +1,325 @@
+        .topnav {
+            overflow: hidden;
+            background-color: #A6D0DD;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .topnav ul {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .topnav li {
+            display: inline-block;
+        }
+        
+        .topnav a {
+            display: inline-block;
+            padding: 50px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: Black;
+            font-family: "hey-eloise", sans-serif;
+            font-size: xx-large;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        #logo {
+            display: inline-block;
+            margin: 0;
+            height: 150px;
+            width: auto; 
+            border-radius: 50%; 
+        }
+
+.row1 {
+    font-family: "canvas-script", sans-serif;
+    margin-left: 30px;
+    font-size: x-large;
+}
+
+.kidfavesflex {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:antiquewhite;
+  display: flex;
+  gap: 10px;
+  gap: 10px 20px; 
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.kidfavesflex > div {
+  background-color: #f1f1f1;
+  width: 280px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.kidfavesflex img {
+  width: 250px;
+}
+
+.kidfavesflex h2 {
+  font-size: x-large;
+  font-family: "hey-eloise", sans-serif;
+}
+
+.kidfavesflex p {
+  font-size: x-large;
+  font-family:"Markazi Text";
+}
+        
+        .kidfaves a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: Black;
+            font-family: "hey-eloise", sans-serif;
+            font-size: xx-large;
+        }
+        
+        .kidfaves a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+.row2 {
+    font-family: "canvas-script", sans-serif;
+    margin-left: 30px;
+    font-size: x-large;
+}
+.Bentosflex {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:antiquewhite;
+  display: flex;
+  gap: 10px;
+  gap: 10px 20px; 
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.Bentosflex > div {
+  background-color: #f1f1f1;
+  width: 280px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.Bentosflex h2 {
+  font-size: x-large;
+  font-family: "hey-eloise", sans-serif;
+}
+
+.Bentosflex p {
+  font-size: x-large;
+  font-family:"Markazi Text";
+}
+
+.Bentosflex img {
+  width: 250px;
+}
+.Bentos a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: Black;
+            font-family: "hey-eloise", sans-serif;
+            font-size: xx-large;
+        }
+        
+        .Bentos a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+.row3 {
+    font-family: "canvas-script", sans-serif;
+    margin-left: 30px;
+    font-size: x-large;
+}
+.Veganflex {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:antiquewhite;
+  display: flex;
+  gap: 10px;
+  gap: 10px 20px; 
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.Veganflex > div {
+  background-color: #f1f1f1;
+  width: 280px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.Veganflex h2 {
+  font-size: x-large;
+  font-family: "hey-eloise", sans-serif;
+}
+
+.Veganflex p {
+  font-size: x-large;
+  font-family:"Markazi Text";
+}
+.Veganflex img {
+  width: 250px;
+}
+.Vegan a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: Black;
+            font-family: "hey-eloise", sans-serif;
+            font-size: xx-large;
+        }
+        
+        .Vegan a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+.row4 {
+    font-family: "canvas-script", sans-serif;
+    margin-left: 30px;
+    font-size: x-large;
+}
+.Vegetarianflex {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:antiquewhite;
+  display: flex;
+  gap: 10px;
+  gap: 10px 20px; 
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.Vegetarianflex > div {
+  background-color: #f1f1f1;
+  width: 280px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.Vegetarianflex h2 {
+  font-size: x-large;
+  font-family: "hey-eloise", sans-serif;
+}
+
+.Vegetarianflex p {
+  font-size: medium;
+}
+
+.Vegetarianflex img {
+  width: 250px;
+}
+.Vegetarian a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: Black;
+            font-family: "hey-eloise", sans-serif;
+            font-size: xx-large;
+        }
+        
+        .Vegetarian a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+.row5 {
+    font-family: "canvas-script", sans-serif;
+    margin-left: 30px;
+    font-size: x-large;
+}
+.Glutenfreeflex {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:antiquewhite;
+  display: flex;
+  gap: 10px;
+  gap: 10px 20px; 
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.Glutenfreeflex > div {
+  background-color: #f1f1f1;
+  width: 280px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.Glutenfreeflex h2 {
+  font-size: x-large;
+  font-family: "hey-eloise", sans-serif;
+}
+
+.Glutenfreeflex p {
+  font-size: x-large;
+  font-family:"Markazi Text";
+}
+.Glutenfreeflex img {
+  width: 250px;
+}
+
+.Glutenfree a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: Black;
+            font-family: "hey-eloise", sans-serif;
+            font-size: xx-large;
+        }
+        
+        .Glutenfree a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+.hover:hover {
+  background-color: rgb(255, 213, 220);
+}
+
+
+.footer {
+  text-align: left;
+  background-color: #A6D0DD;
+  margin-top: 50px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  font-family:  "Moonblossom", sans-serif;
+}
